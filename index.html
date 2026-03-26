@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Sharma | Angular Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><span class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span> Rahul Sharma</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="horizontal-outer">
+    <div class="horizontal-inner">
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting">&#x2014; Greetings, I am &#x2014;</p>
+                <h1 class="name">Rahul Sharma</h1>
+                <h2 class="title-typing">
+                    <span id="typedText"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    <span class="highlight-badge">Immediate joiner</span> and <span class="highlight-badge">job seeker</span> with 6+ years of overall professional experience, including 4+ years in the technology field focused on frontend development and UI-driven applications. Skilled in building responsive, user-friendly interfaces and continuously learning modern technologies. Seeking opportunities to contribute my experience and grow professionally in a dynamic environment.
+                </p>
+                <div class="hero-contact">
+                    <a href="mailto:rahul.sharma.dev@gmail.com"><i class="fas fa-envelope"></i> rahul.sharma.dev@gmail.com</a>
+                    <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
+                    <span><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-pic">
+                    <img src="https://media.gettyimages.com/id/637232854/photo/work-hard-and-smart.jpg?s=612x612&w=0&k=20&c=2Kz_VagYYGg1n1xx7OouIYFO9BCeghh1hoL8YMPIUuw=" alt="Rahul Sharma" class="profile-img">
+                </div>
+                <div class="floating-badge badge-angular"><i class="fab fa-angular"></i></div>
+                <div class="floating-badge badge-ts">TS</div>
+                <div class="floating-badge badge-rx">Rx</div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title"><span class="ornament"><i class="fas fa-code"></i></span> About Me <span class="ornament"><i class="fas fa-code"></i></span></h2>
+            <div class="about-layout">
+            <div class="about-text">
+                <p>
+                    I'm a <span class="highlight-badge">UI/UX Frontend Developer</span> from Trichy, Tamil Nadu with a BCA from Ponnaiyah Ramajayam Institute of Science &amp; Technology (2018).
+                </p>
+                <p>
+                    I started at Accenture as a <span class="highlight-badge">Transaction Processing Representative</span>, spending 2+ years in US healthcare claims processing, building strong attention to detail in high-volume environments.
+                </p>
+                <p>
+                    I then joined Sardonyx Technologies as a <span class="highlight-badge">UI/UX Designer &amp; Developer</span> for 2.5 years, crafting user-friendly websites using Figma, HTML, CSS, JavaScript, and Bootstrap.
+                </p>
+                <p>
+                    Most recently at Stellar Innovations as a <span class="highlight-badge">UI/UX Frontend Developer</span>, I built responsive web applications using Angular, TypeScript, SCSS, Tailwind CSS, Angular Material, PrimeNG, and DaisyUI. My strengths include reusable component development, clean code, UI bug fixing, dynamic form implementation, and form validation.
+                </p>
+            </div>
+            <div class="exp-cards">
+                <div class="exp-card">
+                    <span class="exp-card-value">6+</span>
+                    <span class="exp-card-label">Years Overall Experience</span>
+                </div>
+                <div class="exp-card">
+                    <span class="exp-card-value">4+</span>
+                    <span class="exp-card-label">Years Tech Field</span>
+                </div>
+                <div class="exp-card">
+                    <span class="exp-card-value">2+</span>
+                    <span class="exp-card-label">Years Non-Tech Field</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title"><span class="ornament"><i class="fas fa-code"></i></span> Technical Skills <span class="ornament"><i class="fas fa-code"></i></span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend Core</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">SCSS / SASS</span>
+                        <span class="skill-tag">Grid & Flex</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fab fa-angular"></i> Angular</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Angular (v16+)</span>
+                        <span class="skill-tag">Angular Material</span>
+                        <span class="skill-tag">Material UI</span>
+                        <span class="skill-tag">Signals</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Frameworks, Libraries & Packages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">DaisyUI</span>
+                        <span class="skill-tag">PrimeNG</span>
+                        <span class="skill-tag">ngx-datatable</span>
+                    </div>
+                </div>
+                <div class="skill-category ui-development">
+                    <h3><i class="fas fa-star"></i> UI Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Reusable Component Development</span>
+                        <span class="skill-tag">Clean &amp; Maintainable Code</span>
+                        <span class="skill-tag">UI Bug Fixing &amp; Enhancement</span>
+                        <span class="skill-tag">UI Framework Integration</span>
+                        <span class="skill-tag">Dynamic Form Implementation</span>
+                        <span class="skill-tag">Form Validation &amp; Error Handling</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-pen-ruler"></i> UI Tools (Basic)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Adobe XD</span>
+                    </div>
+                </div>
+                <div class="skill-category tools-ai">
+                    <h3><i class="fas fa-tools"></i> Tools & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">ChatGPT</span>
+                        <span class="skill-tag">Gemini CLI</span>
+                        <span class="skill-tag">Claude CLI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title"><span class="ornament"><i class="fas fa-code"></i></span> Work Experience <span class="ornament"><i class="fas fa-code"></i></span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="total-exp" data-start="2024-06"></span>
+                        <div class="timeline-header">
+                            <h3>UI UX Frontend Developer</h3>
+                            <span class="company">Stellar Innovations</span>
+                        </div>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Jun 2024 &ndash; Present</span>
+                        <ul>
+                            <li>Built responsive and user-friendly web applications as an Angular Developer</li>
+                            <li>Developed frontend features using Angular, HTML, CSS, JavaScript, and TypeScript</li>
+                            <li>Created clean and responsive interfaces using Bootstrap, Tailwind CSS, SCSS, and SASS</li>
+                            <li>Used Material UI and Angular Material to build consistent and modern components</li>
+                            <li>Worked with packages such as DaisyUI, PrimeNG, and ngx-datatable for interactive UI elements and data tables</li>
+                            <li>Continuously learned new tools and improved skills to deliver better user experiences</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Angular</span><span>TypeScript</span><span>JavaScript</span><span>SCSS</span><span>Tailwind CSS</span><span>Bootstrap</span><span>Angular Material</span><span>PrimeNG</span><span>DaisyUI</span><span>ngx-datatable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="total-exp">2 Yrs 6 Mos</span>
+                        <div class="timeline-header">
+                            <h3>UI UX Designer &amp; Developer</h3>
+                            <span class="company">Sardonyx Technologies Pvt Ltd</span>
+                        </div>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Aug 2021 &ndash; Feb 2024</span>
+                        <ul>
+                            <li>Worked as a UI/UX Designer and Frontend Developer with around 40% design and 60% development focus</li>
+                            <li>Used Figma to create wireframes and high-fidelity prototypes emphasizing clarity, simplicity, and smooth user experience</li>
+                            <li>Implemented responsive and interactive interfaces using HTML, CSS, Bootstrap, and JavaScript</li>
+                            <li>Transformed design concepts into functional, working applications across different devices</li>
+                            <li>Stayed updated with modern design trends and frontend technologies to continuously improve work</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Responsive</span><span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="total-exp">2 Yrs 3 Mos</span>
+                        <div class="timeline-header">
+                            <h3>Transaction Processing Representative</h3>
+                            <span class="company">Accenture</span>
+                        </div>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Aug 2018 &ndash; Sep 2020</span>
+                        <div class="tenure-highlights">
+                            <span class="tenure-badge contract"><i class="fas fa-file-contract"></i> Contract Employee &mdash; Aug 2018 &ndash; Nov 2019 <em>(1 Yr 4 Mos)</em></span>
+                            <span class="tenure-badge permanent"><i class="fas fa-building"></i> Permanent Employee &mdash; Nov 2019 &ndash; Sep 2020 <em>(11 Mos)</em></span>
+                        </div>
+                        <ul>
+                            <li>US Healthcare Claim Approver with experience in reviewing and approving medical insurance claims as per US healthcare guidelines</li>
+                            <li>Verified patient eligibility, coverage details, and claim accuracy</li>
+                            <li>Handled claim approval and denial based on payer policies including Medicare, Medicaid, and commercial insurance plans</li>
+                            <li>Ensured timely claim processing within defined SLAs and maintained proper documentation for audit purposes</li>
+                            <li>Identified billing errors and supported fraud, waste, and abuse prevention</li>
+                            <li>Maintained HIPAA compliance and worked efficiently in a high-volume claims environment</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>US Healthcare</span><span>Claims Processing</span><span>HIPAA</span><span>Medicare</span><span>Medicaid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title"><span class="ornament"><i class="fas fa-code"></i></span> Featured Projects <span class="ornament"><i class="fas fa-code"></i></span></h2>
+            <div class="projects-grid">
+                <div class="project-card" data-category="webapp">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SIRA &mdash; Security Industry Regulatory Agency</h3>
+                        <p>A Dubai government&ndash;based web application for managing security services. A form-based CRUD system for business licenses, registration certificates, and NOC approvals. Users can request security guards and submit import/export license registrations. Officers review applications and conduct site visits based on request type. Features role-based access control, real-time application tracking, and automated notifications throughout the approval workflow.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="webapp">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ULRS &mdash; Universal Loan Review System</h3>
+                        <p>A user-friendly software designed to simplify the loan and mortgage review process for non-technical users. Automates extraction of key loan details and identifiers from PDFs, replacing manual and error-prone processes. Supports bulk document uploads and provides structured summaries for faster decision-making. Enhances efficiency, reduces errors, and provides a clear, organized interface for reviewing loan and mortgage data quickly and accurately.</p>
+                        <div class="project-tech">
+                            <span>Angular</span><span>TypeScript</span><span>SCSS</span><span>Angular Material</span><span>ng-bootstrap</span><span>ngx-datatable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="webapp">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-table"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Ultra Table &mdash; Dynamic Table Library</h3>
+                        <p>A custom-built Angular-based dynamic table library for internal company use. Designed to replace ngx-datatable with improved performance, more features, and greater optimization. Supports sorting, filtering, pagination, and column resizing out of the box. Works exclusively in Angular projects, enabling consistent, reusable, and efficient handling of dynamic lists and data tables across the organization.</p>
+                        <div class="project-tech">
+                            <span>Angular</span><span>TypeScript</span><span>SCSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="webapp">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>TPS &mdash; Title Production Service</h3>
+                        <p>A U.S.-based project designed to streamline land purchasing and registration. Users comply with predefined regulations, register land details for verification, and authorized officers conduct live verification of records. The system involves U.S.-based individuals and licensed brokers who assist throughout the buying and registration process, ensuring secure, transparent, and legally compliant land transactions.</p>
+                        <div class="project-tech">
+                            <span>Angular</span><span>TypeScript</span><span>SCSS</span><span>Angular Material</span><span>Bootstrap</span><span>Tailwind CSS</span><span>PrimeNG</span><span>DaisyUI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title"><span class="ornament"><i class="fas fa-code"></i></span> Education <span class="ornament"><i class="fas fa-code"></i></span></h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Bachelor of Computer Applications</h3>
+                    <p class="edu-field">BCA</p>
+                    <p class="edu-school">Ponnaiyah Ramajayam Institute of Science &amp; Technology</p>
+                    <p class="edu-school">Madurai, Tamil Nadu</p>
+                    <p class="edu-year">2015 &ndash; 2018</p>
+                    <p class="edu-score">CGPA: 6.5 / 10</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <div class="container">
+            <h2 class="section-title"><span class="ornament"><i class="fas fa-code"></i></span> Location <span class="ornament"><i class="fas fa-code"></i></span></h2>
+            <div class="education-grid location-grid">
+                <div class="education-card present-address">
+                    <div class="edu-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Present Address <span class="live-badge">Current</span></h3>
+                    <p class="edu-school">4th Seaward Road, Valmiki Nagar</p>
+                    <p class="edu-school">Thiruvanmiyur, Chennai</p>
+                </div>
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fas fa-home"></i></div>
+                    <h3>Permanent Address</h3>
+                    <p class="edu-school">18 Raghava Veera Avenue, Poes Garden</p>
+                    <p class="edu-school">Chennai, Tamil Nadu, 600086</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="resume-wrapper">
+
+            <!-- Tell Me About Yourself -->
+            <div class="aboutme-card" id="aboutmeCard" style="display:none;">
+                <h2 class="aboutme-title"><i class="fas fa-comment-dots"></i> Tell Me About Yourself</h2>
+                <div class="aboutme-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="aboutme-text">
+                    <span class="aboutme-greeting">Hello, I'm Rahul Sharma</span> &mdash; a UI/UX Frontend Developer based in Chennai with <strong>6+ years of overall professional experience</strong>, including <strong>4+ years in the technology field</strong> and <strong>2+ years in the non-technology field</strong>.
+                </p>
+
+                <p class="aboutme-phase-label"><i class="fas fa-briefcase"></i> Non-Tech Experience</p>
+                <p class="aboutme-text">
+                    I started at <strong>Accenture</strong> as a <strong>Transaction Processing Representative</strong> for 2+ years, processing US healthcare claims with strong attention to detail and SLA compliance.
+                </p>
+
+                <p class="aboutme-phase-label"><i class="fas fa-code"></i> Tech Experience</p>
+                <p class="aboutme-text">
+                    I then transitioned into the <strong>technology field</strong> by joining <strong>Sardonyx Technologies</strong> as a <strong>UI/UX Designer &amp; Developer</strong> for 2.5 years. My strength was taking confirmed UI designs and converting them into clean, responsive, and functional code using <strong>HTML, CSS, JavaScript</strong>, and <strong>Bootstrap</strong> across different devices.
+                </p>
+                <p class="aboutme-text">
+                    Currently, I'm working at <strong>Stellar Innovations</strong> as a <strong>UI/UX Frontend Developer</strong>, where I build responsive web applications using <strong>Angular, TypeScript, SCSS, Tailwind CSS, Angular Material, PrimeNG</strong>, and <strong>DaisyUI</strong>. My day-to-day work involves creating reusable components, implementing dynamic forms with validation, fixing UI bugs, and integrating UI frameworks to deliver consistent and modern interfaces.
+                </p>
+
+                <p class="aboutme-phase-label"><i class="fas fa-project-diagram"></i> Key Projects</p>
+                <p class="aboutme-text">
+                    Some of the key projects I've contributed to include <strong>SIRA</strong> (a Dubai government security services platform), <strong>ULRS</strong> (an automated loan review system), <strong>Ultra Table</strong> (a custom Angular table library I helped build from scratch), and <strong>TPS</strong> (a U.S.-based land registration platform).
+                </p>
+
+                <p class="aboutme-phase-label"><i class="fas fa-graduation-cap"></i> Education</p>
+                <p class="aboutme-text">
+                    I hold a <strong>BCA degree</strong> from Ponnaiyah Ramajayam Institute of Science &amp; Technology, Madurai. I'm someone who is always eager to learn, continuously improving my skills, and looking for opportunities where I can contribute meaningfully and grow as a developer.
+                </p>
+
+                <p class="aboutme-text aboutme-closing">
+                    I'm currently an <strong>immediate joiner</strong> and actively seeking new opportunities to bring my experience and passion for frontend development to a dynamic team.
+                </p>
+                <div class="aboutme-quote-icon aboutme-quote-right"><i class="fas fa-quote-right"></i></div>
+            </div>
+
+            <div class="resume-page" id="resumePage">
+
+                <!-- Resume Header -->
+                <div class="r-header">
+                    <div class="r-header-left">
+                        <h1 class="r-name">Rahul Sharma</h1>
+                        <p class="r-role">UI/UX Frontend Developer</p>
+                    </div>
+                    <div class="r-header-right">
+                        <p><i class="fas fa-envelope"></i> rahul.sharma.dev@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+                    </div>
+                </div>
+
+                <hr class="r-divider">
+
+                <!-- Professional Summary -->
+                <div class="r-section">
+                    <h2 class="r-section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+                    <p class="r-text">Immediate joiner with 6+ years of overall professional experience, including 4+ years in the technology field focused on frontend development and UI-driven applications. Skilled in building responsive, user-friendly interfaces using Angular, TypeScript, SCSS, Tailwind CSS, and Angular Material. Strong attention to detail with expertise in reusable component development, clean code, UI bug fixing, dynamic form implementation, and form validation.</p>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="r-section">
+                    <h2 class="r-section-title"><i class="fas fa-cogs"></i> Technical Skills</h2>
+                    <div class="r-skills-grid">
+                        <div class="r-skill-row">
+                            <span class="r-skill-label">Frontend Core</span>
+                            <span class="r-skill-value">HTML, CSS, JavaScript, TypeScript, SCSS/SASS, Grid &amp; Flex</span>
+                        </div>
+                        <div class="r-skill-row">
+                            <span class="r-skill-label">Angular</span>
+                            <span class="r-skill-value">Angular (v16+), Angular Material, Material UI, Signals</span>
+                        </div>
+                        <div class="r-skill-row">
+                            <span class="r-skill-label">Frameworks &amp; Libraries</span>
+                            <span class="r-skill-value">Bootstrap, Tailwind CSS, DaisyUI, PrimeNG, ngx-datatable</span>
+                        </div>
+                        <div class="r-skill-row">
+                            <span class="r-skill-label">UI Development</span>
+                            <span class="r-skill-value">Reusable Components, Clean Code, UI Bug Fixing, Dynamic Forms, Form Validation</span>
+                        </div>
+                        <div class="r-skill-row">
+                            <span class="r-skill-label">UI Tools</span>
+                            <span class="r-skill-value">Figma, Photoshop, Adobe XD</span>
+                        </div>
+                        <div class="r-skill-row">
+                            <span class="r-skill-label">Tools</span>
+                            <span class="r-skill-value">Git, GitHub, VS Code, ChatGPT, Gemini CLI, Claude CLI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="r-section">
+                    <h2 class="r-section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+
+                    <div class="r-exp-item">
+                        <div class="r-exp-header">
+                            <div>
+                                <h3 class="r-exp-role">UI/UX Frontend Developer</h3>
+                                <p class="r-exp-company">Stellar Innovations</p>
+                            </div>
+                            <span class="r-exp-date">Jun 2024 &ndash; Present</span>
+                        </div>
+                        <ul class="r-exp-list">
+                            <li>Built responsive web applications using Angular, HTML, CSS, JavaScript, and TypeScript</li>
+                            <li>Created clean interfaces using Bootstrap, Tailwind CSS, SCSS, and SASS</li>
+                            <li>Used Angular Material, PrimeNG, DaisyUI, and ngx-datatable for modern UI components</li>
+                            <li>Continuously learned new tools to deliver better user experiences</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-exp-item">
+                        <div class="r-exp-header">
+                            <div>
+                                <h3 class="r-exp-role">UI/UX Designer &amp; Developer</h3>
+                                <p class="r-exp-company">Sardonyx Technologies Pvt Ltd</p>
+                            </div>
+                            <span class="r-exp-date">Aug 2021 &ndash; Feb 2024</span>
+                        </div>
+                        <ul class="r-exp-list">
+                            <li>Designed wireframes and prototypes using Figma with focus on clarity and user experience</li>
+                            <li>Implemented responsive interfaces using HTML, CSS, Bootstrap, and JavaScript</li>
+                            <li>Transformed design concepts into functional applications across different devices</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-exp-item">
+                        <div class="r-exp-header">
+                            <div>
+                                <h3 class="r-exp-role">Transaction Processing Representative</h3>
+                                <p class="r-exp-company">Accenture</p>
+                            </div>
+                            <span class="r-exp-date">Aug 2018 &ndash; Sep 2020</span>
+                        </div>
+                        <ul class="r-exp-list">
+                            <li>Reviewed and approved US healthcare medical insurance claims per guidelines</li>
+                            <li>Handled claim approval/denial based on Medicare, Medicaid, and commercial insurance policies</li>
+                            <li>Maintained HIPAA compliance and ensured timely processing within SLAs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="r-section">
+                    <h2 class="r-section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+
+                    <div class="r-project-item">
+                        <h3 class="r-project-name">SIRA &mdash; Security Industry Regulatory Agency</h3>
+                        <p class="r-text">Dubai government-based web app for managing security services with CRUD operations for licenses, certificates, and NOC approvals.</p>
+                    </div>
+
+                    <div class="r-project-item">
+                        <h3 class="r-project-name">ULRS &mdash; Universal Loan Review System</h3>
+                        <p class="r-text">Software to simplify loan and mortgage review by automating PDF data extraction, supporting bulk uploads, and providing structured summaries.</p>
+                    </div>
+
+                    <div class="r-project-item">
+                        <h3 class="r-project-name">Ultra Table &mdash; Dynamic Table Library</h3>
+                        <p class="r-text">Custom Angular table library replacing ngx-datatable with sorting, filtering, pagination, and column resizing features.</p>
+                    </div>
+
+                    <div class="r-project-item">
+                        <h3 class="r-project-name">TPS &mdash; Title Production Service</h3>
+                        <p class="r-text">U.S.-based platform for land purchasing and registration with live verification by authorized officers and licensed broker assistance.</p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="r-section">
+                    <h2 class="r-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="r-edu-item">
+                        <div class="r-exp-header">
+                            <div>
+                                <h3 class="r-exp-role">Bachelor of Computer Applications (BCA)</h3>
+                                <p class="r-exp-company">Ponnaiyah Ramajayam Institute of Science &amp; Technology, Madurai, Tamil Nadu</p>
+                            </div>
+                            <span class="r-exp-date">2015 &ndash; 2018 &bull; CGPA: 6.5/10</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Location -->
+                <div class="r-section">
+                    <h2 class="r-section-title"><i class="fas fa-map-marked-alt"></i> Location</h2>
+                    <div class="r-edu-item">
+                        <div class="r-exp-header">
+                            <div>
+                                <h3 class="r-exp-role"><i class="fas fa-map-marker-alt" style="margin-right: 6px;"></i>Present Address <span style="font-size:0.6em;margin-left:6px;font-weight:700;font-style:italic;">(Current)</span></h3>
+                                <p class="r-exp-company">4th Seaward Road, Valmiki Nagar, Thiruvanmiyur, Chennai</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="r-edu-item" style="margin-top: 12px;">
+                        <div class="r-exp-header">
+                            <div>
+                                <h3 class="r-exp-role"><i class="fas fa-home" style="margin-right: 6px;"></i>Permanent Address</h3>
+                                <p class="r-exp-company">18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    </div><!-- .horizontal-inner -->
+    <div class="scroll-spacer"></div>
+    </div><!-- .horizontal-outer -->
+
+    <div class="resume-float-btns" id="resumeFloatBtns">
+        <button class="resume-download-btn" id="resumeDownloadPdf"><i class="fas fa-file-pdf"></i> PDF</button>
+        <button class="resume-download-btn" id="resumeDownloadBtn"><i class="fas fa-image"></i> IMG</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
