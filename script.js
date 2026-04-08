@@ -412,7 +412,7 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFontSize(9);
     pdf.setTextColor(dark[0], dark[1], dark[2]);
     y = wrap(
-        "Immediate joiner with 6+ years of overall professional experience, including 4+ years in the technology field focused on frontend development and UI-driven applications. Skilled in building responsive, user-friendly interfaces using Angular, TypeScript, SCSS, Tailwind CSS, and Angular Material. Strong attention to detail with expertise in reusable component development, clean code, UI bug fixing, dynamic form implementation, and form validation.",
+        "Frontend Developer with 4+ years of experience building scalable, high-performance web applications using Angular, TypeScript, and modern UI frameworks. Expertise in developing reusable component architectures, dynamic forms, and responsive interfaces. Proven ability to optimize UI performance, integrate REST APIs, and deliver clean, maintainable code in Agile environments.",
         m, y, cW
     );
 
@@ -428,12 +428,13 @@ resumeDownloadPdf.addEventListener("click", function() {
     y += 5.5;
 
     var skills = [
-        ["Frontend Core", "HTML, CSS, JavaScript, TypeScript, SCSS/SASS, Grid & Flex"],
+        ["Frontend Core", "HTML, CSS, JavaScript, TypeScript, SCSS/SASS, Grid & Flexbox"],
         ["Angular", "Angular (v16+), Angular Material, Material UI, Signals"],
         ["Frameworks & Libraries", "Bootstrap, Tailwind CSS, DaisyUI, PrimeNG, ngx-datatable"],
-        ["UI Development", "Reusable Components, Clean Code, UI Bug Fixing, Dynamic Forms, Form Validation"],
+        ["UI Development", "Reusable Components, Clean Code, UI Bug Fixing, Dynamic Forms, Form Validation, Responsive Design, Cross-Browser Compatibility, Performance Optimization (Lazy Loading)"],
         ["UI Tools", "Figma, Photoshop, Adobe XD"],
-        ["Tools", "Git, GitHub, VS Code, ChatGPT, Gemini CLI, Claude CLI"]
+        ["Tools", "Git, GitHub, VS Code"],
+        ["AI", "ChatGPT, Gemini CLI, Claude CLI"]
     ];
 
     pdf.setFontSize(9);
@@ -467,14 +468,16 @@ resumeDownloadPdf.addEventListener("click", function() {
 
     var experiences = [
         {
-            role: "UI/UX Frontend Developer",
-            company: "Stellar Innovations",
+            role: "Frontend Developer (Angular)",
+            company: "Stellar Innovations Pvt Ltd",
             date: "Jun 2024 \u2013 Present",
             points: [
-                "Built responsive web applications using Angular, HTML, CSS, JavaScript, and TypeScript",
-                "Created clean interfaces using Bootstrap, Tailwind CSS, SCSS, and SASS",
-                "Used Angular Material, PrimeNG, DaisyUI, and ngx-datatable for modern UI components",
-                "Continuously learned new tools to deliver better user experiences"
+                "Developed responsive and scalable web applications using Angular, TypeScript, and SCSS, improving UI consistency across devices",
+                "Built reusable component libraries, reducing development time by ~25%",
+                "Implemented dynamic forms and validations, enhancing user data accuracy and reducing input errors",
+                "Integrated REST APIs for real-time data handling and seamless backend communication",
+                "Optimized UI performance using lazy loading and efficient change detection, improving page load speed",
+                "Utilized Angular Material, PrimeNG, and Tailwind CSS to deliver modern, accessible UI components"
             ]
         },
         {
@@ -482,9 +485,11 @@ resumeDownloadPdf.addEventListener("click", function() {
             company: "Sardonyx Technologies Pvt Ltd",
             date: "Aug 2021 \u2013 Feb 2024",
             points: [
-                "Designed wireframes and prototypes using Figma with focus on clarity and user experience",
-                "Implemented responsive interfaces using HTML, CSS, Bootstrap, and JavaScript",
-                "Transformed design concepts into functional applications across different devices"
+                "Designed and developed responsive user interfaces using HTML, CSS, Bootstrap, and JavaScript",
+                "Created wireframes and prototypes in Figma, accelerating design-to-development workflow",
+                "Converted UI/UX designs into functional applications with cross-browser compatibility",
+                "Collaborated with backend teams to integrate APIs and ensure smooth data flow",
+                "Improved user experience through UI enhancements and bug fixes, reducing user-reported issues",
             ]
         },
         {
@@ -492,9 +497,8 @@ resumeDownloadPdf.addEventListener("click", function() {
             company: "Accenture",
             date: "Aug 2018 \u2013 Sep 2020",
             points: [
-                "Reviewed and approved US healthcare medical insurance claims per guidelines",
-                "Handled claim approval/denial based on Medicare, Medicaid, and commercial insurance policies",
-                "Maintained HIPAA compliance and ensured timely processing within SLAs"
+                "Processed and validated US healthcare claims with high accuracy under strict SLA timelines",
+                "Ensured compliance with HIPAA regulations and data security standards"
             ]
         }
     ];
@@ -535,9 +539,9 @@ resumeDownloadPdf.addEventListener("click", function() {
     y += 5.5;
 
     var projects = [
-        ["SIRA \u2014 Security Industry Regulatory Agency", "Dubai government-based web app for managing security services with CRUD operations for licenses, certificates, and NOC approvals."],
-        ["ULRS \u2014 Universal Loan Review System", "Software to simplify loan and mortgage review by automating PDF data extraction, supporting bulk uploads, and providing structured summaries."],
-        ["Ultra Table \u2014 Dynamic Table Library", "Custom Angular table library replacing ngx-datatable with sorting, filtering, pagination, and column resizing features."],
+        ["SIRA \u2014 Security Industry Regulatory Agency", "Developed Angular-based government application for managing licenses and approvals. Implemented CRUD operations and form validation for secure data handling. Tech: Angular, TypeScript, SCSS, REST APIs."],
+        ["ULRS \u2014 Universal Loan Review System", "Built system to automate PDF data extraction and loan processing workflows. Improved efficiency by reducing manual data handling. Tech: Angular, JavaScript, API Integration."],
+        ["Ultra Table \u2014 Dynamic Table Library", "Developed reusable data table component with sorting, filtering, and pagination. Replaced ngx-datatable, improving flexibility and customization. Tech: Angular, TypeScript."],
         ["TPS \u2014 Title Production Service", "U.S.-based platform for land purchasing and registration with live verification by authorized officers and licensed broker assistance."]
     ];
 
