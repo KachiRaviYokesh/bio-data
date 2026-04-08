@@ -388,7 +388,7 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(10);
     pdf.setTextColor(gray[0], gray[1], gray[2]);
-    pdf.text("UI/UX Frontend Developer", m, y);
+    pdf.text("Frontend Developer (Angular)", m, y);
 
     y += secGap;
     line(y);
