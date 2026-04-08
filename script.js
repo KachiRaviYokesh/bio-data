@@ -424,7 +424,7 @@ resumeDownloadPdf.addEventListener("click", function() {
 
     var skills = [
         ["Frontend Core", "HTML, CSS, JavaScript, TypeScript, SCSS/SASS, Grid & Flexbox"],
-        ["Angular", "Angular (v16+), Angular Material, Material UI, Signals"],
+        ["Angular", "Angular (v16+), Angular Material, Signals"],
         ["Frameworks & Libraries", "Bootstrap, Tailwind CSS, DaisyUI, PrimeNG, ngx-datatable"],
         ["UI Development", "Reusable Components, Clean Code, UI Bug Fixing, Dynamic Forms, Form Validation, Responsive Design, Cross-Browser Compatibility, Performance Optimization (Lazy Loading)"],
         ["UI Tools", "Figma, Photoshop, Adobe XD"],
