@@ -359,9 +359,9 @@ resumeDownloadPdf.addEventListener("click", function() {
     var black = [0, 0, 0];
     var dark = [40, 40, 40];
     var gray = [90, 90, 90];
-    var y = 14;
-    var lh = 4.2;
-    var secGap = 5.5;
+    var y = 11;
+    var lh = 3.2;
+    var secGap = 2.8;
 
     function line(yPos) {
         pdf.setDrawColor(160, 160, 160);
@@ -384,20 +384,13 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setTextColor(black[0], black[1], black[2]);
     pdf.text("Rahul Sharma", m, y);
 
-    pdf.setFont("helvetica", "normal");
-    pdf.setFontSize(9);
-    pdf.setTextColor(dark[0], dark[1], dark[2]);
-    pdf.text("rahul.sharma.dev@gmail.com", pageW - m, y - 2, { align: "right" });
-    pdf.text("+91 98765 43210", pageW - m, y + 3, { align: "right" });
-    pdf.text("Bangalore, India", pageW - m, y + 8, { align: "right" });
-
-    y += 8;
+    y += 6;
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(10);
     pdf.setTextColor(gray[0], gray[1], gray[2]);
     pdf.text("UI/UX Frontend Developer", m, y);
 
-    y += 4;
+    y += secGap;
     line(y);
     y += secGap;
 
@@ -405,18 +398,19 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(11);
     pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
     pdf.text("PROFESSIONAL SUMMARY", m, y);
-    y += 5.5;
+    y += secGap * 2;
 
     pdf.setFont("helvetica", "normal");
-    pdf.setFontSize(9);
+    pdf.setFontSize(8.8);
     pdf.setTextColor(dark[0], dark[1], dark[2]);
     y = wrap(
         "Frontend Developer with 4+ years of experience building scalable, high-performance web applications using Angular, TypeScript, and modern UI frameworks. Expertise in developing reusable component architectures, dynamic forms, and responsive interfaces. Proven ability to optimize UI performance, integrate REST APIs, and deliver clean, maintainable code in Agile environments.",
         m, y, cW
     );
 
-    y += 2;
+    y += secGap * 0.25;
     line(y);
     y += secGap;
 
@@ -424,8 +418,9 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(11);
     pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
     pdf.text("TECHNICAL SKILLS", m, y);
-    y += 5.5;
+    y += secGap * 2;
 
     var skills = [
         ["Frontend Core", "HTML, CSS, JavaScript, TypeScript, SCSS/SASS, Grid & Flexbox"],
@@ -437,7 +432,7 @@ resumeDownloadPdf.addEventListener("click", function() {
         ["AI", "ChatGPT, Gemini CLI, Claude CLI"]
     ];
 
-    pdf.setFontSize(9);
+    pdf.setFontSize(8.8);
     var skillLabelWidth = 40;
     for (var s = 0; s < skills.length; s++) {
         pdf.setFont("helvetica", "bold");
@@ -452,10 +447,47 @@ resumeDownloadPdf.addEventListener("click", function() {
             pdf.text(valLines[vl], valX, y);
             if (vl < valLines.length - 1) y += lh;
         }
-        y += 4.8;
+        y += 3.2;
     }
 
-    y += 0.5;
+    y += secGap * 0.25;
+    line(y);
+    y += secGap;
+
+    // ===== GITHUB =====
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(11);
+    pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
+    pdf.text("GITHUB", m, y);
+    y += secGap * 2;
+
+    var githubLinks = [
+        { label: "Personal", url: "https://github.com/rahul-sharma-dev",  display: "github.com/rahul-sharma-dev" },
+        { label: "Work",     url: "https://github.com/rahul-sharma-work", display: "github.com/rahul-sharma-work" }
+    ];
+
+    pdf.setFontSize(8.8);
+    var ghLabelWidth = 40;
+    for (var g = 0; g < githubLinks.length; g++) {
+        pdf.setFont("helvetica", "bold");
+        pdf.setTextColor(black[0], black[1], black[2]);
+        pdf.text(githubLinks[g].label + ":", m, y);
+
+        pdf.setFont("helvetica", "normal");
+        pdf.setTextColor(0, 102, 204);
+        var gX = m + ghLabelWidth;
+        pdf.textWithLink(githubLinks[g].display, gX, y, { url: githubLinks[g].url });
+        var gW = pdf.getTextWidth(githubLinks[g].display);
+        pdf.setDrawColor(0, 102, 204);
+        pdf.setLineWidth(0.2);
+        pdf.line(gX, y + 0.6, gX + gW, y + 0.6);
+
+        y += 3.2;
+    }
+    pdf.setTextColor(dark[0], dark[1], dark[2]);
+
+    y += secGap * 0.25;
     line(y);
     y += secGap;
 
@@ -463,8 +495,9 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(11);
     pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
     pdf.text("WORK EXPERIENCE", m, y);
-    y += 5.5;
+    y += secGap * 2;
 
     var experiences = [
         {
@@ -503,7 +536,7 @@ resumeDownloadPdf.addEventListener("click", function() {
         }
     ];
 
-    pdf.setFontSize(9);
+    pdf.setFontSize(8.8);
     for (var e = 0; e < experiences.length; e++) {
         var exp = experiences[e];
         pdf.setFont("helvetica", "bold");
@@ -512,12 +545,12 @@ resumeDownloadPdf.addEventListener("click", function() {
         pdf.setFont("helvetica", "normal");
         pdf.setTextColor(dark[0], dark[1], dark[2]);
         pdf.text(exp.date, pageW - m, y, { align: "right" });
-        y += 4.2;
+        y += 3.8;
 
         pdf.setFont("helvetica", "italic");
         pdf.setTextColor(gray[0], gray[1], gray[2]);
         pdf.text(exp.company, m, y);
-        y += 4.5;
+        y += 4;
 
         pdf.setFont("helvetica", "normal");
         pdf.setTextColor(dark[0], dark[1], dark[2]);
@@ -525,9 +558,10 @@ resumeDownloadPdf.addEventListener("click", function() {
             pdf.text("\u2022  " + exp.points[p], m + 3, y);
             y += lh;
         }
-        y += 3;
+        y += 1.5;
     }
 
+    y += secGap * 0.05;
     line(y);
     y += secGap;
 
@@ -535,8 +569,9 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(11);
     pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
     pdf.text("PROJECTS", m, y);
-    y += 5.5;
+    y += secGap * 2;
 
     var projects = [
         ["SIRA \u2014 Security Industry Regulatory Agency", "Developed Angular-based government application for managing licenses and approvals. Implemented CRUD operations and form validation for secure data handling. Tech: Angular, TypeScript, SCSS, REST APIs."],
@@ -545,18 +580,31 @@ resumeDownloadPdf.addEventListener("click", function() {
         ["TPS \u2014 Title Production Service", "U.S.-based platform for land purchasing and registration with live verification by authorized officers and licensed broker assistance."]
     ];
 
-    pdf.setFontSize(9);
+    pdf.setFontSize(8.8);
     for (var pr = 0; pr < projects.length; pr++) {
         pdf.setFont("helvetica", "bold");
         pdf.setTextColor(black[0], black[1], black[2]);
         pdf.text(projects[pr][0], m, y);
-        y += 4.2;
+        y += 3.6;
         pdf.setFont("helvetica", "normal");
         pdf.setTextColor(dark[0], dark[1], dark[2]);
-        y = wrap(projects[pr][1], m, y, cW);
-        y += 2.5;
+
+        var sentences = pr === projects.length - 1
+            ? [projects[pr][1].replace(/\.\s*$/, "")]
+            : projects[pr][1].split(".");
+        for (var sn = 0; sn < sentences.length; sn++) {
+            var sentence = sentences[sn].trim();
+            if (!sentence) continue;
+            var bulletLines = pdf.splitTextToSize("\u2022  " + sentence, cW - 3);
+            for (var bl = 0; bl < bulletLines.length; bl++) {
+                pdf.text(bulletLines[bl], m + 3, y);
+                y += lh;
+            }
+        }
+        y += 1.2;
     }
 
+    y += secGap * 0.05;
     line(y);
     y += secGap;
 
@@ -564,54 +612,74 @@ resumeDownloadPdf.addEventListener("click", function() {
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(11);
     pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
     pdf.text("EDUCATION", m, y);
-    y += 5.5;
+    y += secGap * 2;
 
     pdf.setFont("helvetica", "bold");
-    pdf.setFontSize(9);
+    pdf.setFontSize(8.8);
     pdf.setTextColor(black[0], black[1], black[2]);
     pdf.text("Bachelor of Computer Applications (BCA)", m, y);
     pdf.setFont("helvetica", "normal");
     pdf.setTextColor(dark[0], dark[1], dark[2]);
     pdf.text("2015 \u2013 2018  |  CGPA: 6.5/10", pageW - m, y, { align: "right" });
-    y += 4.2;
+    y += 3.6;
     pdf.setFont("helvetica", "italic");
     pdf.setTextColor(gray[0], gray[1], gray[2]);
     pdf.text("Ponnaiyah Ramajayam Institute of Science & Technology, Madurai, Tamil Nadu", m, y);
 
-    y += 3.5;
+    y += secGap * 1.25;
     line(y);
     y += secGap;
 
-    // ===== LOCATION =====
+    // ===== CONTACT & LOCATION =====
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(11);
     pdf.setTextColor(black[0], black[1], black[2]);
-    pdf.text("LOCATION", m, y);
-    y += 5.5;
+    y += secGap;
+    pdf.text("CONTACT & LOCATION", m, y);
+    y += secGap * 2;
 
-    pdf.setFontSize(9);
-    pdf.setFont("helvetica", "bold");
-    pdf.setTextColor(black[0], black[1], black[2]);
-    pdf.text("Present Address:", m, y);
-    pdf.setFont("helvetica", "italic");
-    pdf.setTextColor(gray[0], gray[1], gray[2]);
-    var paLW = pdf.getTextWidth("Present Address:  ");
-    pdf.text("(Current)", m + paLW, y);
-    pdf.setFont("helvetica", "normal");
-    pdf.setTextColor(dark[0], dark[1], dark[2]);
-    var paValX = m + paLW + pdf.getTextWidth("(Current)  ");
-    pdf.text("4th Seaward Road, Valmiki Nagar, Thiruvanmiyur, Chennai", paValX, y);
+    pdf.setFontSize(8.8);
+    var contactLabelWidth = 40;
+    var contactRows = [
+        ["Name:",  "Rahul Sharma"],
+        ["Phone:", "+91 98765 43210"],
+        ["Email:", "rahul.sharma.dev@gmail.com"],
+        ["Present Address:", "4th Seaward Road, Valmiki Nagar, Thiruvanmiyur, Chennai"],
+        ["Permanent Address:", "18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086"]
+    ];
+    for (var c = 0; c < contactRows.length; c++) {
+        pdf.setFont("helvetica", "bold");
+        pdf.setTextColor(black[0], black[1], black[2]);
+        pdf.text(contactRows[c][0], m, y);
+        pdf.setFont("helvetica", "normal");
+        pdf.setTextColor(dark[0], dark[1], dark[2]);
+        pdf.text(contactRows[c][1], m + contactLabelWidth, y);
+        y += 3.2;
+    }
 
-    y += 4.5;
+    // pdf.setFont("helvetica", "bold");
+    // pdf.setTextColor(black[0], black[1], black[2]);
+    // pdf.text("Present Address:", m, y);
+    // pdf.setFont("helvetica", "italic");
+    // pdf.setTextColor(gray[0], gray[1], gray[2]);
+    // var paLW = pdf.getTextWidth("Present Address:  ");
+    // pdf.text("(Current)", m + paLW, y);
+    // pdf.setFont("helvetica", "normal");
+    // pdf.setTextColor(dark[0], dark[1], dark[2]);
+    // var paValX = m + paLW + pdf.getTextWidth("(Current)  ");
+    // pdf.text("4th Seaward Road, Valmiki Nagar, Thiruvanmiyur, Chennai", paValX, y);
 
-    pdf.setFont("helvetica", "bold");
-    pdf.setTextColor(black[0], black[1], black[2]);
-    pdf.text("Permanent Address:", m, y);
-    pdf.setFont("helvetica", "normal");
-    pdf.setTextColor(dark[0], dark[1], dark[2]);
-    var prLW = pdf.getTextWidth("Permanent Address:  ");
-    pdf.text("18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086", m + prLW, y);
+    // y += 4;
+
+    // pdf.setFont("helvetica", "bold");
+    // pdf.setTextColor(black[0], black[1], black[2]);
+    // pdf.text("Permanent Address:", m, y);
+    // pdf.setFont("helvetica", "normal");
+    // pdf.setTextColor(dark[0], dark[1], dark[2]);
+    // var prLW = pdf.getTextWidth("Permanent Address:  ");
+    // pdf.text("18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086", m + prLW, y);
 
     pdf.save("Rahul_Sharma_Resume.pdf");
 });
