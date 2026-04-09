@@ -467,11 +467,11 @@ resumeDownloadPdf.addEventListener("click", function() {
 
     var experiences = [
         {
-            role: "Frontend Developer (Angular)",
+            role: "Frontend Developer",
             company: "Stellar Innovations Pvt Ltd",
             date: "Jun 2024 \u2013 Present",
             points: [
-                "Developed responsive and scalable web applications using Angular, TypeScript, and SCSS, improving UI consistency across devices",
+                "Built responsive, scalable web applications using Angular, TypeScript, SCSS, improving UI consistency across devices",
                 "Built reusable component libraries, reducing development time by ~25%",
                 "Implemented dynamic forms and validations, enhancing user data accuracy and reducing input errors",
                 "Integrated REST APIs for real-time data handling and seamless backend communication",

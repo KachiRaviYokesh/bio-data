@@ -504,7 +504,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
 
     var experiences = [
         {
-            role: "Frontend Developer (Angular)",
+            role: "Frontend Developer",
             company: "Stellar Innovations Pvt Ltd",
             date: "Jun 2024 \u2013 Present",
             points: [
