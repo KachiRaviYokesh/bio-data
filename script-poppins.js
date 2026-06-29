@@ -416,10 +416,11 @@ resumeDownloadPdf.addEventListener("click", async function() {
     }
 
     // ===== HEADER =====
+    y += 4.5;
     pdf.setFont("Poppins", "bold");
     pdf.setFontSize(22);
     pdf.setTextColor(black[0], black[1], black[2]);
-    pdf.text("Rahul Sharma", m, y);
+    pdf.text("Yokesh K R", m, y);
 
     y += 5;
     pdf.setFont("Poppins", "normal");
@@ -430,6 +431,39 @@ resumeDownloadPdf.addEventListener("click", async function() {
     y += secGap * 1.75;
     line(y);
     y += secGap * 2.5;
+
+    // ===== CONTACT & LOCATION =====
+    pdf.setFont("Poppins", "bold");
+    pdf.setFontSize(10);
+    pdf.setTextColor(black[0], black[1], black[2]);
+    y += secGap;
+    pdf.text("CONTACT & LOCATION", m, y);
+    y += secGap * 4;
+
+    pdf.setFontSize(9);
+    var contactLabelWidth = 40;
+    var contactRows = [
+        // ["Name:",  "Yokesh K R"],
+        ["Phone:", "+91 9944783264"],
+        ["Email:", "yokeshveera@gmail.com"],
+        ["Address:", "109, Shiva Sai Apartment, Kammasandra, Habbagodi, Bangalore - 560100"],
+        // ["Permanent Address:", "13/22, Sowrashtra Middle Street, Kumbakonam(Tamil Nadu) - 612001"]
+    ];
+    for (var c = 0; c < contactRows.length; c++) {
+        pdf.setFont("Poppins", "bold");
+        pdf.setTextColor(black[0], black[1], black[2]);
+        pdf.text(contactRows[c][0], m, y);
+        pdf.setFont("Poppins", "normal");
+        pdf.setTextColor(dark[0], dark[1], dark[2]);
+        pdf.text(contactRows[c][1], m + contactLabelWidth, y);
+        y += 4.4;
+    }
+    y -= lh;
+
+    y += secGap * 1.75;
+    line(y);
+    y += secGap * 2.5;
+    // y -= 4.6;
 
     // ===== PROFESSIONAL SUMMARY =====
     pdf.setFont("Poppins", "bold");
@@ -443,7 +477,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
     pdf.setFontSize(9);
     pdf.setTextColor(dark[0], dark[1], dark[2]);
     y = wrap(
-        "Frontend Developer with 4+ years of experience building scalable, high-performance web applications using Angular, TypeScript, and modern UI frameworks. Expertise in developing reusable component architectures, dynamic forms, and responsive interfaces. Proven ability to optimize UI performance, integrate REST APIs, and deliver clean, maintainable code in Agile environments.",
+        "Frontend Developer with 6.5 years of overall experience, including 4.5 years of relevant experience building scalable, high-performance web applications using Angular, TypeScript, and modern UI frameworks. Expertise in developing reusable component architectures, dynamic forms, and responsive interfaces. Proven ability to optimize UI performance, integrate REST APIs, and deliver clean, maintainable code in Agile environments.",
         m, y, cW
     );
     y -= lh;
@@ -462,9 +496,9 @@ resumeDownloadPdf.addEventListener("click", async function() {
 
     var skills = [
         ["Frontend Core", "HTML, CSS, JavaScript, TypeScript, SCSS/SASS, Grid & Flexbox"],
-        ["Angular", "Angular (v16+), Angular Material, Signals"],
+        ["Angular", "Angular (v16+), Angular Material, Signals, Form Controls, Ngrx, RxJS, Reusable & Custom Components, Dependency Injection, Async Process, Performance Optimization"],
         ["Frameworks", "Bootstrap, Tailwind CSS, DaisyUI, PrimeNG, ngx-datatable"],
-        ["UI Development", "Reusable Components, Clean Code, UI Bug Fixing, Dynamic Forms, Form Validation, Responsive Design, Cross-Browser Compatibility, Performance Optimization (Lazy Loading)"],
+        ["UI Development", "UI Bug Fixing, Form Validation, Responsive Design, Cross-Browser Compatibility"],
         ["UI Tools", "Figma, Photoshop, Adobe XD"],
         ["Tools", "Git, GitHub, VS Code"],
         ["AI", "ChatGPT, Gemini CLI, Claude CLI"]
@@ -506,7 +540,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
         {
             role: "Frontend Developer",
             company: "Stellar Innovations Pvt Ltd",
-            date: "Jun 2024 \u2013 Present",
+            date: "Jun 2024 \u2013 May 2026",
             points: [
                 "Built responsive, scalable web applications using Angular, TypeScript, SCSS, improving UI consistency across devices",
                 "Built reusable component libraries, reducing development time by ~25%",
@@ -627,43 +661,15 @@ resumeDownloadPdf.addEventListener("click", async function() {
     pdf.text("Bachelor of Computer Applications (BCA)", m, y);
     pdf.setFont("Poppins", "normal");
     pdf.setTextColor(dark[0], dark[1], dark[2]);
-    pdf.text("2015 \u2013 2018  |  CGPA: 6.5/10", pageW - m, y, { align: "right" });
+    pdf.text("2015 \u2013 2018  |  CGPA: 6.9/10", pageW - m, y, { align: "right" });
     y += 4.6;
     pdf.setFont("Poppins", "italic");
     pdf.setTextColor(gray[0], gray[1], gray[2]);
-    pdf.text("Ponnaiyah Ramajayam Institute of Science & Technology, Madurai, Tamil Nadu", m, y);
+    pdf.text("Ponnaiyah Ramajayam Institute of Science & Technology, Vallam, Thanjavur, Tamil Nadu", m, y);
 
-    y += secGap * 1.75;
-    line(y);
-    y += secGap * 2.5;
-
-    // ===== CONTACT & LOCATION =====
-    pdf.setFont("Poppins", "bold");
-    pdf.setFontSize(10);
-    pdf.setTextColor(black[0], black[1], black[2]);
-    y += secGap;
-    pdf.text("CONTACT & LOCATION", m, y);
-    y += secGap * 4;
-
-    pdf.setFontSize(9);
-    var contactLabelWidth = 40;
-    var contactRows = [
-        ["Name:",  "Rahul Sharma"],
-        ["Phone:", "+91 98765 43210"],
-        ["Email:", "rahul.sharma.dev@gmail.com"],
-        ["Present Address:", "4th Seaward Road, Valmiki Nagar, Thiruvanmiyur, Chennai"],
-        ["Permanent Address:", "18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086"]
-    ];
-    for (var c = 0; c < contactRows.length; c++) {
-        pdf.setFont("Poppins", "bold");
-        pdf.setTextColor(black[0], black[1], black[2]);
-        pdf.text(contactRows[c][0], m, y);
-        pdf.setFont("Poppins", "normal");
-        pdf.setTextColor(dark[0], dark[1], dark[2]);
-        pdf.text(contactRows[c][1], m + contactLabelWidth, y);
-        y += 4.6;
-    }
-    y -= 4.6;
+    // y += secGap * 1.75;
+    // line(y);
+    // y += secGap * 2.5;
 
     // pdf.setFont("Poppins", "bold");
     // pdf.setTextColor(black[0], black[1], black[2]);
@@ -687,7 +693,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
     // var prLW = pdf.getTextWidth("Permanent Address:  ");
     // pdf.text("18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086", m + prLW, y);
 
-    pdf.save("Rahul_Sharma_Resume.pdf");
+    pdf.save("Yokesh_Resume.pdf");
 });
 
 // ==================== INIT ====================
