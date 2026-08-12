@@ -420,7 +420,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
     pdf.setFont("Poppins", "bold");
     pdf.setFontSize(22);
     pdf.setTextColor(black[0], black[1], black[2]);
-    pdf.text("Yokesh K R", m, y);
+    pdf.text("Rahul Sharma", m, y);
 
     y += 5;
     pdf.setFont("Poppins", "normal");
@@ -443,11 +443,11 @@ resumeDownloadPdf.addEventListener("click", async function() {
     pdf.setFontSize(9);
     var contactLabelWidth = 40;
     var contactRows = [
-        // ["Name:",  "Yokesh K R"],
-        ["Phone:", "+91 9944783264"],
-        ["Email:", "yokeshveera@gmail.com"],
-        ["Address:", "109, Shiva Sai Apartment, Kammasandra, Habbagodi, Bangalore - 560100"],
-        // ["Permanent Address:", "13/22, Sowrashtra Middle Street, Kumbakonam(Tamil Nadu) - 612001"]
+        // ["Name:",  "Rahul Sharma"],
+        ["Phone:", "+91 9876543210"],
+        ["Email:", "abc@gmail.com"],
+        ["Address:", "bbb"],
+        // ["Permanent Address:", "aaa"]
     ];
     for (var c = 0; c < contactRows.length; c++) {
         pdf.setFont("Poppins", "bold");
@@ -665,7 +665,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
     y += 4.6;
     pdf.setFont("Poppins", "italic");
     pdf.setTextColor(gray[0], gray[1], gray[2]);
-    pdf.text("Ponnaiyah Ramajayam Institute of Science & Technology, Vallam, Thanjavur, Tamil Nadu", m, y);
+    pdf.text("Periyar Maniyammai", m, y);
 
     // y += secGap * 1.75;
     // line(y);
@@ -693,7 +693,7 @@ resumeDownloadPdf.addEventListener("click", async function() {
     // var prLW = pdf.getTextWidth("Permanent Address:  ");
     // pdf.text("18 Raghava Veera Avenue, Poes Garden, Chennai, Tamil Nadu, 600086", m + prLW, y);
 
-    pdf.save("Yokesh_Resume.pdf");
+    pdf.save("Rahul_Sharma_Resume.pdf");
 });
 
 // ==================== INIT ====================
